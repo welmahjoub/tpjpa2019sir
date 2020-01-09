@@ -3,6 +3,11 @@ package jpa;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import Repository.ChoixRepository;
+import Repository.DateReunionRepository;
+import Repository.ReunionRepository;
+import Repository.SondageRepository;
+import Repository.UserRepository;
 import entity.Utilisateur;
 
 public class JpaTest {
@@ -19,12 +24,12 @@ public class JpaTest {
 
 		try {
 
+			UserRepository.remplirTableUser();
+			SondageRepository.remplirTableSondage();
+			DateReunionRepository.remplirTable();
+			ReunionRepository.remplirTable();
+			ChoixRepository.remplirTable();
  
-		Utilisateur user1 =new Utilisateur();
-				user1.setNom("Mahjoub");
-				user1.setPrenom("Abdel");
-				user1.setMail("Abdel@gmail.com");
-				manager.persist(user1);
 
 		} catch (Exception e) {
 			e.printStackTrace();

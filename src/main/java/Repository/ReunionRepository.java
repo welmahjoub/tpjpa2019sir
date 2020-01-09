@@ -16,7 +16,7 @@ public class ReunionRepository {
 
 	static EntityManager manager = EntityManagerHelper.getEntityManager();
 	
-	public static void remplirTableSondage()
+	public static void remplirTable()
 	{
 		
 		int number = manager.createQuery("Select r From Reunion r", Reunion.class).getResultList().size();

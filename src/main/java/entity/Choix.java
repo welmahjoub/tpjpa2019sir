@@ -22,6 +22,8 @@ private Utilisateur user;
 
 @ManyToOne
 private Sondage sondage;
+
+
 public Date getDatechoisie() {
 	return datechoisie;
 }
