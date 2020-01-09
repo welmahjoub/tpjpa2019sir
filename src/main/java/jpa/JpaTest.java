@@ -18,10 +18,19 @@ public class JpaTest {
 
 
 		try {
+<<<<<<< HEAD
 
 
 			
 				
+=======
+ 
+		Utilisateur user1 =new Utilisateur();
+				user1.setNom("Mahjoub");
+				user1.setPrenom("Abdel");
+				user1.setMail("Abdel@gmail.com");
+				manager.persist(user1);
+>>>>>>> branch 'master' of https://github.com/welmahjoub/tpjpa2019sir
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
