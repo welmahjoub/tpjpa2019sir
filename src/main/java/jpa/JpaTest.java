@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceContext;
 
-import entity.User;
+import entity.Utilisateur;
 
 public class JpaTest {
 
@@ -20,7 +20,7 @@ public class JpaTest {
 
 		try {
 
-		User user1 =new User();
+		Utilisateur user1 =new Utilisateur();
 				user1.setNom("Mahjoub");
 				user1.setPrenom("Abdel");
 				user1.setMail("Abdel@gmail.com");
