@@ -25,6 +25,7 @@ public class UserRepository {
 		user1.setMail("Abdel@gmail.com");
 		manager.persist(user1);
 		
+		
 		Utilisateur user2=new Utilisateur();
 		user2.setNom("yaya");
 		user2.setPrenom("simp");
