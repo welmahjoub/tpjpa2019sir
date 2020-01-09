@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -31,6 +32,33 @@ private long id;
 
 @ManyToOne(targetEntity=Utilisateur.class)
 private Utilisateur user;
+
+@OneToOne
+private Reunion reunion;
+
+public List<DateReunion> getDateProposees() {
+	return dateProposees;
+}
+
+public void setDateProposees(List<DateReunion> dateProposees) {
+	this.dateProposees = dateProposees;
+}
+
+public List<Choix> getChoix() {
+	return choix;
+}
+
+public void setChoix(List<Choix> choix) {
+	this.choix = choix;
+}
+
+public Reunion getReunion() {
+	return reunion;
+}
+
+public void setReunion(Reunion reunion) {
+	this.reunion = reunion;
+}
 
 public String getLien() {
 	return lien;
