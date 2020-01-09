@@ -37,6 +37,7 @@ public void setPreferenceAliments(String preferenceAliments) {
 public String getAllergies() {
 	return allergies;
 }
+
 public void setAllergies(String allergies) {
 	this.allergies = allergies;
 }
