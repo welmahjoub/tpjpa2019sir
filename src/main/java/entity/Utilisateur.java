@@ -1,12 +1,10 @@
 package entity;
 
 import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Transient;
 
 @Entity
 public class Utilisateur {
@@ -14,12 +12,16 @@ public class Utilisateur {
 
 private String nom, prenom, mail;
 
-//@OneToMany(targetEntity=Sondage.class, mappedBy = "user")
+@OneToMany(targetEntity=Sondage.class, mappedBy = "user")
 private List<Sondage> sondages;
- 
-private long id;
+
+@OneToMany(mappedBy = "user")
+private List<Choix> choix;
+
 @Id
 @GeneratedValue
+private long id;
+
 public long getId() {
 	return id;
 }
@@ -50,6 +52,22 @@ public String getMail() {
 
 public void setMail(String mail) {
 	this.mail = mail;
+}
+
+public List<Sondage> getSondages() {
+	return sondages;
+}
+
+public void setSondages(List<Sondage> sondages) {
+	this.sondages = sondages;
+}
+
+public List<Choix> getChoix() {
+	return choix;
+}
+
+public void setChoix(List<Choix> choix) {
+	this.choix = choix;
 }
 
 
