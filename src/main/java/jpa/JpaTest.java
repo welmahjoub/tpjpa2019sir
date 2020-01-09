@@ -20,13 +20,8 @@ public class JpaTest {
 		try {
 
 
-			Utilisateur user1 =new Utilisateur();
-
-
-				user1.setNom("Mahjoub");
-				user1.setPrenom("Abdel");
-				user1.setMail("Abdel@gmail.com");
-				manager.persist(user1);
+			
+				
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
