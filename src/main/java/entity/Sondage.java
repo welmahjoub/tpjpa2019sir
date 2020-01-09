@@ -12,7 +12,7 @@ import javax.persistence.TemporalType;
 @Entity
 public class Sondage {
 	
-private String lien;
+private String lien; 
 
 @Temporal(TemporalType.DATE)
 private Date dateCreation;
@@ -44,9 +44,10 @@ public void setUser(Utilisateur user) {
 	this.user = user;
 }
 
-private long id;
 @Id
 @GeneratedValue
+private long id;
+
 public long getId() {
 	return id;
 }

@@ -1,17 +1,25 @@
 package entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Utilisateur {
 
-private long id;
+
 private String nom, prenom, mail;
 
+@OneToMany(targetEntity=Sondage.class, mappedBy = "user")
+private List<Sondage> sondages;
+ 
 @Id
 @GeneratedValue
+private long id;
+
 public long getId() {
 	return id;
 }
