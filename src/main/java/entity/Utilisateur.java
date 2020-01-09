@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class Utilisateur {
 
 private long id;
 private String nom, prenom, mail;
