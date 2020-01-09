@@ -3,6 +3,8 @@ package jpa;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import Repository.SondageRepository;
+import Repository.UserRepository;
 import entity.Utilisateur;
 
 public class JpaTest {
@@ -19,12 +21,9 @@ public class JpaTest {
 
 		try {
 
- 
-		Utilisateur user1 =new Utilisateur();
-				user1.setNom("Mahjoub");
-				user1.setPrenom("Abdel");
-				user1.setMail("Abdel@gmail.com");
-				manager.persist(user1);
+        
+        UserRepository.remplirTableUser();
+        SondageRepository.remplirTableSondage();
 
 		} catch (Exception e) {
 			e.printStackTrace();
