@@ -11,7 +11,7 @@ import javax.persistence.TemporalType;
 //@Entity
 public class Sondage {
 	
-private String lien;
+private String lien; 
 
 @Temporal(TemporalType.DATE)
 private Date dateCreation;

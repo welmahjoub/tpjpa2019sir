@@ -16,7 +16,7 @@ private String nom, prenom, mail;
 
 //@OneToMany(targetEntity=Sondage.class, mappedBy = "user")
 private List<Sondage> sondages;
-
+ 
 private long id;
 @Id
 @GeneratedValue

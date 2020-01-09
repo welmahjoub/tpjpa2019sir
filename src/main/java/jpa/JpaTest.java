@@ -19,7 +19,7 @@ public class JpaTest {
 
 
 		try {
-
+ 
 		Utilisateur user1 =new Utilisateur();
 				user1.setNom("Mahjoub");
 				user1.setPrenom("Abdel");
