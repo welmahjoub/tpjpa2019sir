@@ -6,22 +6,23 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import entity.DateReunion;
+import entity.Choix;
 import entity.Sondage;
 import entity.Utilisateur;
 import jpa.EntityManagerHelper;
 
-public class DateReunionRepository {
+public class ChoixRepository {
 
 	static EntityManager manager = EntityManagerHelper.getEntityManager();
 	
 	public static void remplirTable()
 	{
 		
-		int number = manager.createQuery("Select d From DateReunion d", DateReunion.class).getResultList().size();
+		int number = manager.createQuery("Select c From Choix c", Choix.class).getResultList().size();
 		
 		if (number == 0) {	
-			
+		
+
 			Utilisateur user2=new Utilisateur();
 			user2.setNom("user2");
 			user2.setPrenom("user2");
@@ -34,20 +35,25 @@ public class DateReunionRepository {
 			s.setLien("lien");
 			manager.persist(s);
 			
-		DateReunion dateReunion = new DateReunion();
-		dateReunion.setSondage(s);
-		dateReunion.setDate(new Date());
-		
-		manager.persist(dateReunion);
+			Choix choix = new Choix();
+			choix.setPreferenceAliments("Pizza, creme fraiche");
+			choix.setSondage(s);
+			choix.setUser(user2);
+			choix.setAllergies("gluten");
+			choix.setDatechoisie(new Date());
+			manager.persist(choix);
+			
 		
 		}
 	}
 	
-	public static List<Sondage> getListeSondage()
+
+	public static List<Utilisateur> getListeUser()
 	{
 		
-		Query q=manager.createQuery("select a from Sondage");
+		Query q=manager.createQuery("select a from Utilisateur");
 		
 		return q.getResultList();
 	}
+	
 }
