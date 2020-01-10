@@ -21,9 +21,8 @@ public class JpaTest {
 
 		try {
 
-        
-        UserRepository.remplirTableUser();
         SondageRepository.remplirTableSondage();
+        UserRepository.remplirTableUser();
 
 		} catch (Exception e) {
 			e.printStackTrace();
