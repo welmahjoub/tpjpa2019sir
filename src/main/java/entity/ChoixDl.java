@@ -2,6 +2,9 @@ package entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+
+@Entity
 public class ChoixDl extends Choix {
 
 	private Date datechoisie;
